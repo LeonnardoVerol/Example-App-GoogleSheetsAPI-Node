@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 
-export default class GoogleSheetApiService {
+export default class GoogleSheetApi {
 
 	constructor() {
 		this.sheets = google.sheets('v4');
@@ -19,7 +19,7 @@ export default class GoogleSheetApiService {
 
 		// For some reason, "this.constructor.name" is not working as expected
 		// if(new.target.name === this.constructor.name) {
-		if(new.target.name === 'GoogleSheetApiService') {
+		if(new.target.name === 'GoogleSheetApi') {
 			throw new TypeError("Cannot construct Abstract instances directly");
 		}
 	}

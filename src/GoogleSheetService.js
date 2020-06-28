@@ -1,6 +1,6 @@
-import GoogleSheetApiService from './GoogleSheetApiService';
+import GoogleSheetApi from './GoogleSheetApi';
 
-export default class GoogleSheet extends GoogleSheetApiService {
+export default class GoogleSheetService extends GoogleSheetApi {
 	constructor() {
 		super();
 		this.getRequestParameters = {

@@ -1,9 +1,9 @@
-import GoogleSheet from './GoogleSheet';
+import GoogleSheetService from './GoogleSheetService';
 
 (async function main () {
 
 	try {
-		const googleSheet = new GoogleSheet();
+		const googleSheet = new GoogleSheetService();
 
 		const response = await googleSheet.get();
 		console.log(response);
@@ -12,7 +12,7 @@ import GoogleSheet from './GoogleSheet';
 
 		const response = await googleSheet.get();
 		console.log(response);
-		
+
 		await googleSheet.append({
 			title: 'L',
 			category: undefined,
