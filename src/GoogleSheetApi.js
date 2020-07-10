@@ -53,15 +53,25 @@ export default class GoogleSheetApi {
 	}
 
 	async get() {
-		const response = await this.sheets.spreadsheets.values.get(this.getRequestParameters);
-		return response.data.values;
+		try {
+			const response = await this.sheets.spreadsheets.values.get(this.getRequestParameters);
+			return response.data.values;
+		}
+		catch (error) {
+			console.log(error)
+		}
 	}
 
 	async append(newRow) {
 		const request = this.appendRequestParameters;
 		request['resource'] = {"values": [newRow]};
 
-		const response = await this.sheets.spreadsheets.values.append(request);
-		return response.data;
+		try {
+			const response = await this.sheets.spreadsheets.values.append(request);
+			return response.data;
+		}
+		catch (error) {
+			console.log(error)
+		}
 	}
 }
