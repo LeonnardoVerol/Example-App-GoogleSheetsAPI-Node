@@ -17,8 +17,8 @@ export default class GoogleSheetApi {
 		this.key = this.getKeys();
 		this.authClient = this.authorize();
 
-		// For some reason, "this.constructor.name" is not working as expected
-		// if(new.target.name === this.constructor.name) {
+		// Also possible:
+		// if(new.target === GoogleSheetApie) {
 		if(new.target.name === 'GoogleSheetApi') {
 			throw new TypeError("Cannot construct Abstract instances directly");
 		}
