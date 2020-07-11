@@ -18,7 +18,7 @@ export default class GoogleSheetApi {
 		this.authClient = this.authorize();
 
 		// Also possible:
-		// if(new.target === GoogleSheetApie) {
+		// if(new.target === GoogleSheetApi) {
 		if(new.target.name === 'GoogleSheetApi') {
 			throw new TypeError("Cannot construct Abstract instances directly");
 		}
